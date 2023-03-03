@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-heading: 'Staatliches', 'cursive';
+  --ff-texting: 'Roboto', sans-serif;
+  --ff-footer: 'Open Sans', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-areas: 
+  "header main"
+  "header footer";
+  grid-template-columns: 37.7rem auto;
+  grid-template-rows: auto 7.4rem;
+}
+
+header {
+  height: 100%vh;
+  grid-area: header;
+  background: #8E9AAF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  margin: 3.2rem auto;
+}
+
+header h1 {
+  height: 7rem;
+  width: 100%;
+  background-color: #CBC0D3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: 4.8rem;
+  line-height: 3.4rem;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+  margin: 3.2rem 5.1rem auto 5.1rem;
+  font-family: var(--ff-texting);
+  font-weight: 400;
+  font-size: 1.6rem; 
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+main {
+  grid-area: main;
+  margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+  "par1 par2 par3";
+
+  column-gap: 3.2rem;
+  margin: auto 3.2rem;
+}
+
+.ice-cream {
+  max-width: 22rem;
+  position: relative;
+}
+
+.ice-cream img {
+  max-width: 100%;
+  border-radius: 2rem;  
+}
+
+.par-img :nth-child(1) img{
+  margin-bottom: 3.2rem;
+}
+
+.ice-cream h2 {
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: 2.0rem;
+  color: #4A4E69;
+  width: 9rem;
+  height: 2.8rem;
+  background-color: #FEEAFA;
+  border-radius: 2.0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem ;
+}
+
+footer p {
+  grid-area: footer;
+  font-family: var(--ff-footer);
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #4A4E69;
+  height: 2.8rem;
+  margin-top: 5rem;
+
+}
+
+footer a {
+  color: #4A4E69;
+  font-weight: 700;
+}
+
+main {
+  animation: downtop 700ms;
+}
+
+h2 {
+  animation: topdown 700ms;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  100% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
